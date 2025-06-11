@@ -216,6 +216,266 @@
             <li>Tipo</li>
             <li>Evidencia</li>
         </ol>
+        <h3>Exemplos de bug report</h3>
+        <p>planilha 1</p>
+        <p>planilha 2</p>
+        <p>planilha 3</p>
+        <h3>técnica de Partição de Equivalência</h3>
+        <p>é uma fórmula de particionar nosso teste para tentar reduzir o número de casos de teste necessários, agrupando entradas que se comportem da mesma forma</p>
+        <p>
+            exemplo, ao invés de testar cada valor de entrada possível, você divide os dados de entrada em <strong>classes de equivalência</strong> dentro de cada classe, se espera que o software se comporte da mesma forma entre os resultados, então você apenas seleciona UM representante de cada classe, pois os outros funcionarão da mesma forma 
+        </p>
+        <h3>Processos de desenvolvimento</h3>
+        <h4>SDLC(software Development Life Cycle)</h4>
+        <h4>Waterfall</h4>
+        <p>
+            a ordem de passagem do produto vai em cascata na ordem
+        </p>
+        <ol>
+            <li><em>Stakeholder</em>- gera a demanda e requisita a criação do aplicativo</li>
+            <li><em>Produto(P.O./P.M.)</em> - cria as tasks e manda para a equipe de design</li>
+            <li><em>Design</em> - cuidam do protótipo do aplicativo, e como ele ficaria no papel</li>
+            <li><em>Implementation/Devs</em> - criam o aplicativo requisitado</li>
+            <li><em>Testing/QA</em> - fazemos a revisão geral do produto</li>
+            <li><em>Maintenance/Devs</em> - voltam para a equipe de desenvolvedores até estar devidamente corrigido e revisado</li>
+            <li><em>Produto final</em></li>
+        </ol>
+        <h4>Scrum</h4>
+        <p>
+            O Scrum é um framework ágil para gerenciar e desenvolver produtos complexos, ideal para equipes que precisam se adaptar rapidamente às mudanças e entregar valor de forma incremental. Ele se baseia em ciclos curtos e repetitivos chamados Sprints.
+        </p>
+        <ol>
+            <li><em>Product Backlog / Refinamento / Grooming:</em> No início, existe uma lista priorizada de tudo que o produto precisa ter, as funcionalidades e melhorias. Essa lista é chamada de Product Backlog e é mantida pelo Product Owner, que representa os interesses dos usuários e do negócio.</li>
+            <li><em>Sprint Planning:</em> A equipe se reúne para planejar o próximo Sprint (geralmente de 1 a 4 semanas). Eles escolhem itens do Product Backlog que conseguirão entregar nesse período e os detalham, criando o Sprint Backlog.</li>
+            <li><em>Sprint:</em> Durante o Sprint, a equipe de desenvolvimento trabalha para construir os itens selecionados. Eles são auto-organizados e se ajudam para entregar o que foi planejado.</li>
+            <li><em>Daily Scrum (Reunião Diária):</em> Todos os dias, a equipe faz uma reunião rápida (até 15 minutos) para sincronizar o trabalho. Cada um responde a três perguntas: O que fiz ontem? O que farei hoje? Há algum impedimento?</li>
+            <li><em>Incremento Pronto:</em> Ao final do Sprint, a equipe deve entregar um Incremento de Produto que seja "pronto" (potencialmente utilizável, testado e funcionando).</li>
+            <li><em>Sprint Review:</em> A equipe apresenta o incremento pronto para os stakeholders (interessados), que dão feedback e sugerem ajustes para futuras Sprints.</li>
+            <li><em>Sprint Retrospective:</em> Sprint Retrospective: A equipe se reúne para refletir sobre o Sprint que acabou. Eles identificam o que funcionou bem, o que pode ser melhorado e criam um plano para implementar essas melhorias nos próximos Sprints.</li>
+        </ol>
+        <h4>Testes em cada momento do scrum</h4>
+        <p>
+            na fase de refinamento(Grooming) devemos <strong>Criar cenários de teste</strong>
+        </p>
+        <p>
+            na fase de planning devemos <strong>Ter casos de teste prontos ou perto de finalizar
+            </strong>
+        </p>
+        <p>
+            e na fase de retrospectiva ou Review teremos os Bug reports e Tests Reports
+        </p>
+        <p>
+            após o projeto estar na fileira <em>Done</em> e soltar a release, faremos <strong>Testes de Regressão(Manual e automatizados)</strong>
+        </p>
+        <p>
+            e caso ele já tenha saído pra Produção, podemos realizar mais uma vez os testes de Regressão, ou se não for possível, os <strong>Smoke tests(manual e automatizado)</strong>
+        </p>
+        <p>
+            <strong>Produção</strong>
+            é onde o usuário já tem acesso
+        </p>
+        <h2>3.JavaScript para automação</h2>
+        <h3>Variáveis</h3>
+        <p>
+            uma variável é um espaço de memória que irá guardar um valor
+        </p>
+        <ul>
+            <li>Number - atrelado a números</li>
+            <li>String - geralmente atrelado a palavras, as quais precisam estar com aspas para serem reconhecidas</li>
+            <li>Boolean - atrelado a binariedade, retorna ou true ou false</li>
+            <li>Array - referenciado com [] precisa ser chamado pelo nome da variável, e o valor dentro das chaves com a posição desejada para retornar o item da posição</li>
+            <li>Object - referenciado por {}, para ser chamado na função, basta chamar com o nome da variável, seguida de um ponto e a classe interior</li>
+            <li>Date - utilizado para buscar datas</li>
+        </ul>
+        <h4>diferença de let, const e var</h4>
+        <p>
+            quando vc cria uma variável com <em>let</em>
+            ela poderá ser alterado quando pedido novamente
+        </p>
+        <p>
+            quando vc cria uma variável com <em>const</em>
+            ela <strong>não</strong> poderá ser alterada enquanto o seu programa estiver rodando
+        </p>
+        <p>
+            o var é uma forma <STRONG>DEPRECIADA</STRONG> de se declarar variáveis, desde 2015 não é mais utilizado, ele tinha a mesma função do let, mas não é mais utilizado
+        </p>
+        <h4>Como alterar dados do object</h4>
+        <p>
+            suponhamos que temos a seguinte linha
+        </p>
+        <pre><code>
+            pessoa {Nome: 'Many', Idade: 28, Casado: true, Pais: 'Canadá'}
+        </code></pre>
+        <p>
+            se utilizarmos o comando <q>pessoa = 'alessandro'</q> para mudar o nome, perderemos todos os outros dados salvos no objeto e ele só retornará 'alessandro'
+        </p>
+        <p>
+            então teremos que fazer da seguinte forma
+        </p>
+        <pre><code>
+            pessoa.Nome = "Alessandro"
+        </code></pre>
+        <p>
+            dessa forma apenas a classe "Nome" terá mudado seus dados, e ao ser chamado o objeto retornará todos os valores com apenas o nome alterado
+        </p>
+        <pre><code>
+            pessoa {Nome: 'Alessandro', Idade: 28, Casado: true, Pais: 'Canadá'}
+        </code></pre>
+        <h4>como alterar os dados do Array</h4>
+        <p>
+            seguindo a mesma lógica, mas ao invés de buscarmos a posição do dado pela classe, pegaremos pela posição dele na ordem que inicia pelo número zero
+        </p>
+        <pre><code>
+            array [10, 12, 'text', true, false, 'Test']
+        </code></pre>
+        <p>
+            iremos alterar o número 12, que está na posição 1(logo após o 0)
+        </p>
+        <pre><code>
+            array[1] = 100
+        </code></pre>
+        <p>assim esse será o resultado final</p>
+        <pre><code>
+            array [10, 100, 'text', true, false, 'Test']
+        </code></pre>
+        <h4>Concatenação de dados</h4>
+        <p>
+            concatenar, ou "juntar" serve normalmente para unir strings, como letras não se somam, elas irão se ordenar da forma descrita
+        </p>
+        <pre><code>
+            let test1 = "super"
+            let test2 = "poder"
+        </code></pre>
+        <p>
+            ao tentar unir com um <q>let juntos = test1 + test2</q>
+        </p>
+        <p>
+            o console retornará a palavra "superpoder" ao chamar pela variável juntos
+        </p>
+        <pre><code>
+            let juntos = test1 + " " + test2
+        </code></pre>
+        <p>
+            agora sim, dessa forma o console retornará as palavras "super poder" já que o caractere em branco foi incluído na equação
+        </p>
+        <p>
+            existem outras formas de fazer o console retornar como
+        </p>
+        <pre><code>
+            juntos = `${test1} ${test2}`
+        </code></pre>
+        <p>
+            assim eu estou invocando as variáveis com duas crases
+        </p>
+        <h4>imprimindo informações no sistema</h4>
+        <p>
+            para imprimir, utilizamos o <strong>console.log()</strong>
+        </p>
+        <h4>funções simples</h4>
+        <p>
+            para fazer uma função, temos que escrever <em>function</em>, dar um nome pra função, e fechar parênteses, em seguida abrir colchetes e escrever a função desejada dentro, exemplo:
+        </p>
+        <pre><code>
+            function soma(){
+                return 10+12
+            }
+        </code></pre>
+        <p>
+            nesse caso o <em>return</em> foi utilizado para retornar a soma, sem ele apenas haveriam dois valores somados sem nenhuma utilidade
+        </p>
+        <p>
+            e para mostrar o resultado basta adicionar
+        </p>
+        <pre><code>
+            console.log(soma())
+        </code></pre>
+        <p>
+            que pode ser inserido até dentro da função, mas pra ela rodar vai ter que ser chamada em algum lugar do sistema
+        </p>
+        <pre><code>
+            function soma() {
+                console.log(10+12)
+            }
+
+            soma()
+        </code></pre>
+        <p>
+           no exemplo acima o console irá retornar pela soma ter sido chamada diretamente, mas é melhor manter o return, ou continuar com o pretendido inicialmente
+        </p>
+        <pre><code>
+            function soma() {
+                return 10+12
+            }
+
+            console.log(soma())
+        </code></pre>
+        <p>
+            <q>E para que servem os parênteses na função soma?</q> eles servem para inserir parâmetros qualquer que seja necessário dependendo da nossa necessidade
+        </p>
+        <pre><code>
+            function soma(x, y) {
+                return x + y
+            }
+
+            console.log(soma())
+        </code></pre>
+        <p>
+            este exemplo acima retornará como <q>NaN(Not a Number)</q> pois os números não foram inseridos, x e y nesse caso são apenas letras, mas se fizermos:
+        </p>
+        <pre><code>
+            function soma(x, y) {
+                return x + y
+            }
+
+            console.log(soma(50, 20))
+        </code></pre>
+        <p>
+            o console vai nos retornar qualquer soma que inserirmos no lugar daquelas letras
+        </p>
+        <pre><code>
+            function soma(x, y) {
+                return x + y
+            }
+
+            function sub(x, y) {
+                return x - y
+            }
+
+            console.log(sub(50,20))
+            console.log(soma(50, 20))
+
+            resultado:
+            30
+            70
+        </code></pre>
+        <p>
+            as funções só rodam quando são chamadas, e se elas não forem chamadas no console.log continuam rodando, só não conseguimos visualizar
+        </p>
+        <h4>Mais exemplos</h4>
+        <pre><code>
+            function textCreator(name, age, currentYear) {
+  
+            let birthYear = currentYear - age
+            return `Seu nome é ${name}, idade é ${age}, e o ano atual é ${currentYear}. Você nasceu em ${birthYear}`
+        }
+
+            console.log(textCreator("many", 28, 2023))
+        </code></pre>
+        <p>
+            o código acima coleta os dados inseridos no chamado da função e retorna o ano de nascimento, também é possível fazer o mesmo com concatenação
+        </p>
+        <pre><code>
+            function textCreator(name, age, currentYear) {
+  
+            let birthYear = currentYear - age
+            return "Seu nome é " + name + ", idade é " + age + ", e o ano atual é " + currentYear + ". Você nasceu em " + birthYear
+            }
+
+            console.log(textCreator("many", 28, 2023))
+        </code></pre>
+        <p>
+            mas da outra forma é mais legível no código, melhor que ficar concatenando e somando várias strings
+        </p>
     </main>
     <footer>
 

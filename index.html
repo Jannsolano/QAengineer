@@ -36,6 +36,186 @@
             <dt>Automação Mobile</dt>
             <dd>testando aplicativos iOS e Android</dd>
         </dl>
+
+        <h2>2.Software Testing</h2>
+        <p>
+            ele é dividido em duas etapas, o <strong>teste estático</strong> e o <strong>teste dinâmico</strong> 
+        </p>
+        <article>
+            <h3>Teste estático</h3>
+            <p>
+                tudo relacionado a qualidade, revisões do código, garantir padrões a ser seguido pela empresa no código, garantir o alinhamento do time
+            </p>
+        </article>
+        <article>
+            <h3>Teste dinâmico</h3>
+            <p>
+                entrar no aplicativo, procurar bugs, procurar problemas no app
+            </p>
+        </article>
+        <article>
+            <h3>Validação</h3>
+            <p>
+                Validar se o produto ficará satisfatório e útil para o usuário
+            </p>
+        </article>
+        <article>
+            <h3>verificação</h3>
+            <p>
+                são os testes que fazemos para verificar se há problemas que complicam o uso do software ou bugs
+            </p>
+        </article>
+        <h3>Objetivos do QA</h3>
+        <ul>
+            <li><em>Avaliação do produto</em> - saber se o produto funciona corretamente</li>
+            <li><em>cumprimento de requisitos</em> - validar se o software cumpre seu papel proposto</li>
+            <li><em>construir confiança</em> - realizar os testes e automações para dar confiança ao time pra dar deploy no produto</li>
+            <li><em>achar defeitos</em> - testar o sistema minuciosamente e procurar com esmero</li>
+            <li><em>prever bugs</em>- planejar antecipadamente quais problemas podem acontecer, e já fazer os testes para garantir que aconteçam</li>
+            <li><em>Reports para Stakeholder</em> - quanto de cobertura de testes temos, dizer quais os testes realizados</li>
+            <li><em>Reduzir Riscos</em> - sempre buscar garantir que o produto não terá bugs ou defeitos, para evitar riscos para a empresa</li>
+        </ul>
+        <h3>Processos do Teste</h3>
+        <h4>Planejamento de testes</h4>
+        <ul>
+            <li>Analisar e entender o produto</li>
+            <li>Criar estratégias para um plano de ação</li>
+            <li>Planejar</li>
+            <li>Determinar as Ferramentas</li>
+        </ul>
+        <h4>Design</h4>
+        <ul>
+            <li>Casos de teste</li>
+            <li>Cenarios de teste</li>
+            <li>Desenvolver a Automação</li>
+        </ul>
+        <h4>Execução</h4>
+        <ul>
+            <li>Reporte de Teste</li>
+            <li>Acompanhar defeitos</li>
+            <li>Report</li>
+        </ul>
+        <h3>Principais tipos de teste</h3>
+        <p>
+            Lembrando que todos são importantes, lembrar de fazer todos independente da ordem que aqui estiverem listados
+        </p>
+        <ul>
+            <li><em>Testes não funcionais</em> - são os testes que não são relacionados a funcionalidade do produto, ex: teste de extresse, de tempo de resposta, verificar capacidade do sistema</li>
+            <li><em>Testes Funcionais</em> - categoriza como todos os testes de funcionalidade do produto</li>
+            <li><em>Teste de caixa preta</em> - São os que fazemos no sistema sem acesso ao código</li>
+            <li><em>Teste de caixa branca</em> - São so que testamos no código em si</li>
+            <li><em>Teste Dinâmico</em> - são os que fazemos rodando o código</li>
+            <li><em>Teste Estático</em> -toda a parte de criar os processos e padrões de teste</li>
+            <li><em>Reteste</em> - verificamos e repetimos todos os testes das features para garantir que a correção dos bugs dos devs não acabaram quebrando o resto do sistema</li>
+            <li><em>Testes unitários</em> - normalmente feito pelo dev, testa as funções, do código que acabou de ser criado</li>
+            <li><em>Teste de Integração</em> - testar as features que se integram entre si, ex: feature de carrinho e a de compra</li>
+            <li><em>Teste End-2-End</em> - são os testes pelo caminho que o usuário faz completamente até o fim do processo</li>
+            <li><em>Teste Smoke</em> - é o que cuida das principais funcionalidades da aplicação, definir todas que devem ter a prioridade máxima de funcionamento</li>
+            <li><em>Testes exploratórios</em> - É feito explorando como um usuário que nunca chegou a utilizar o sistema</li>
+            <li><em>Teste de regressão</em> - rodar <strong>todos</strong> os testes já feitos para garantir que tudo foi passado e corrigido corretamente</li>
+        </ul>
+        <h3>Pirâmide de Testes</h3>
+        <p>
+            Ela indica quais testes são os mais rápidos e quais os mais demorados
+        </p>
+        <h4>End-to-end Tests</h4>
+        <p>
+            podem ser feitos manualmente ou por automação, ele vai ser bem mais demorado e custoso, pois vão testar toda a função feita como um usuário usaria o sistema
+        </p>
+        <h4>integrations Tests</h4>
+        <p>
+            acontecem tanto no código, quanto no sistema, nelas que fazemos os testes das features ficarem interagindo uma com a outra, podem ser feitos tanto manualmente como automatizados(como por cypress), é bastante feito por devs, mas são obrigação do QA também
+        </p>
+        <h4>Unit Tests</h4>
+        <p>
+            é o tipo de teste mais barato e rápido, normalmente os testes unitários são feitos pelos desenvolvedores, testa as funções de cada método, fica na base da pirâmide porque eles serão feitos milhares de vezes, porém acabarão ocupando pouquíssimo tempo, já que serão automatizados <em>a menos que eles não estejam otimizados</em>
+        </p>
+        <h3>Processos de scrum</h3>
+        <h4>Entendendo cenários de testes</h4>
+        <p>
+            -entenda do produto -> lendo documentação, BRS, SRS, FRS, SUT
+            -Usar o sistema
+            -isolar os requisitos
+            -listar cenários de teste
+            -Revisão
+        </p>
+        <p>
+            primeiramente entenda do produto, para isso Leia a documentação do produto
+        </p>
+        <h4>como criar cenarios de testes na ferramenta Trello</h4>
+        <p>
+
+        </p>
+        <h4>Casos de Teste</h4>
+        <ol>
+            <li><em>Titulo</em></li>
+            <li><em>Précondição</em></li>
+            <li><em>Passo-a-passo dos testes</em></li>
+            <li><em>Resultado Esperado</em></li>
+            <li><em>Cenário de teste</em></li>
+            <li><em>Ambiente de teste</em></li>
+            <li><em>Status</em></li>
+        </ol>
+        <p>
+            imagem de exemplo
+        </p>
+        <table>
+            <tr>
+                <th>Título</th>
+                <th>Logando com email e senha válido</th>
+            </tr>
+            <tr>
+                <td>Passo-a-passo</td>
+                <td>inserir usuário válido/ inserir senha válida / Clicar em Login</td>
+            </tr>
+            <tr>
+                <td>Resultado esperado</td>
+                <td>usuário loga com sucesso / usuário é redirecionado para a página inicial</td>
+            </tr>
+            <tr>
+                <td>suite de teste</td>
+                <td>Login</td>
+            </tr>
+            <tr>
+                <td>Ambiente de teste</td>
+                <td>Google Chrome / Safari / Firefox</td>
+            </tr>
+            <tr>
+                <td>Resultado encontrado</td>
+                <td>O mesmo que o esperado</td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td>Passou</td>
+            </tr>
+        </table>
+        <p>
+            O status é definido em 4 estados
+        </p>
+        <ul>
+            <li>Pronto - quando ainda não foi testado</li>
+            <li>Falhou</li>
+            <li>Passou</li>
+            <li>Bloqueado - quando não for possível fazer o teste</li>
+        </ul>
+        <h3>Tipos de Bug</h3>
+        <ol>
+            <li>Funcional</li>
+            <li>Visual(UI)</li>
+            <li>Conteúdo</li>
+            <li>Performance</li>
+            <li>Sugestão</li>
+        </ol>
+        <h3>Tópicos de um Bug Report</h3>
+        <ol>
+            <li>Passos para reprodução</li>
+            <li>Resultado esperado</li>
+            <li>Resultado Encontrado</li>
+            <li>Ambiente de teste</li>
+            <li>Prioridade</li>
+            <li>Tipo</li>
+            <li>Evidencia</li>
+        </ol>
     </main>
     <footer>
 

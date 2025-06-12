@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+body {
+    background-color: gray;
+}
+
+.title-red {
+    color: red;
+}
+
+#text-green{
+    color: greenyellow;
+}
+
+#text-yellow {
+    color: yellow;
+}
+
+button {
+    color: red;
+}
